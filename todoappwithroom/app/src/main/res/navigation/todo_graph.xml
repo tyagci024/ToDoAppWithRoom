@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/todo_graph"
+    app:startDestination="@id/toDoListFragment">
+
+    <fragment
+        android:id="@+id/toDoListFragment"
+        android:name="com.example.todoappwithroom.view.ToDoListFragment"
+        android:label="fragment_to_do_list"
+        tools:layout="@layout/fragment_to_do_list" >
+        <action
+            android:id="@+id/action_toDoListFragment_to_toDoUpdateFragment"
+            app:destination="@id/toDoUpdateFragment" />
+        <action
+            android:id="@+id/action_toDoListFragment_to_toDoAddFragment"
+            app:destination="@id/toDoAddFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/toDoAddFragment"
+        android:name="com.example.todoappwithroom.view.ToDoAddFragment"
+        android:label="fragment_to_do_add"
+        tools:layout="@layout/fragment_to_do_add" >
+        <action
+            android:id="@+id/action_toDoAddFragment_to_toDoListFragment"
+            app:destination="@id/toDoListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/toDoUpdateFragment"
+        android:name="com.example.todoappwithroom.view.ToDoUpdateFragment"
+        android:label="fragment_to_do_update"
+        tools:layout="@layout/fragment_to_do_update" >
+        <action
+            android:id="@+id/action_toDoUpdateFragment_to_toDoListFragment"
+            app:destination="@id/toDoListFragment" />
+        <argument
+            android:name="currentTask"
+            app:argType="com.example.todoappwithroom.model.Task" />
+    </fragment>
+</navigation>

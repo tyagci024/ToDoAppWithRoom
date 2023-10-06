@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark"
+    tools:context=".view.ToDoAddFragment">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingStart="50dp"
+        android:paddingEnd="50dp"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enter Details"
+            android:textColor="@color/white"
+            android:textSize="28dp"
+            android:layout_marginBottom="16dp"
+            android:textAlignment="center"/>
+        <EditText
+            android:id="@+id/taskName"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:padding="5dp"
+            android:paddingStart="8dp"
+            android:layout_marginBottom="16dp"
+            android:textColorHint="@color/grey"
+            android:background="@drawable/input_bg"
+            android:hint="enter task"
+            android:textColor="@color/white"
+
+            />
+        <EditText
+            android:id="@+id/taskDetail"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:padding="8dp"
+            android:background="@drawable/input_bg"
+            android:paddingStart="8dp"
+            android:hint="enter details"
+            android:textColorHint="@color/grey"
+            android:layout_marginBottom="16dp"
+            android:textColor="@color/white"
+
+            />
+        <Spinner
+
+            android:id="@+id/prioritySpinner"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/button_bg"
+            android:layout_marginBottom="16dp"
+            android:entries="@array/priority_array"
+            />
+
+        <Button
+            android:id="@+id/addButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="save"
+            android:padding="5dp"
+            android:background="@drawable/button_bg"
+            />
+
+
+            
+            
+
+        
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
